@@ -1,0 +1,321 @@
+body {
+	
+	margin: 0;
+	padding:0;
+	font-family: 'Open Sans', sans-serif;
+	background: #efefef;
+}
+
+h2 {
+	font-size: 14px;
+}
+h3 {
+	font-size: 12px;
+}
+
+.lineblue {
+	background: #0f5293;
+	width: 100%;
+	height: 3px;
+}
+.lineorange {
+	background: #ffaf00;
+    width: 100%;
+	height: 3px; 
+}
+header {
+	width: 100%;
+	position: fixed;
+    background: #fff;
+    height: 65px;
+    z-index: 1000;
+}
+.box {
+    width: 25%;
+    height: 300px;
+    background: #fff;
+    margin: auto;
+    border: 1px #d6d6d6 solid;
+    border-radius: 2px;
+}
+.logospace {
+    width: 100%;
+    margin: 50px 0px 40px 0px;
+}
+.logoauth {
+    margin: auto;
+    width: 110px;
+    height: 60px;
+}
+
+/*form styles*/
+.msform {
+	width: 400px;
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
+}
+.msform fieldset {
+	background: #fff;
+	border: 0 none;
+	border-radius: 3px;
+	padding: 20px 30px;
+	margin: 0 10%;
+	/*stacking fieldsets above each other*/
+	position: relative;
+}
+
+/*inputs*/
+.msform input, .msform textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	color: #2C3E50;
+	font-size: 13px;
+	height: 49px;
+}
+/*buttons*/
+.msform .action-button {
+    width: 100px;
+    background: #0f5293;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+    border-radius: 3px;
+}
+.isanau {
+	margin:auto;
+	width: 58px;
+}
+.triangle {
+    width: 0px;
+    height: 20px;
+    border-top: solid 13px #fff;
+    border-left: solid 24px transparent;
+    border-right: solid 24px transparent;
+    position: relative;
+    top: -7px;
+}
+.container {
+    display: inline-block;
+    width: 100%;
+    margin-top: 100px;
+    height: remove;
+}
+/*фвв form styles*/
+.addform {
+	width: 100%;
+	margin: 20px auto;
+	text-align: center;
+	position: relative;
+}
+.addform fieldset {
+	background: #fff;
+	border: 0 none;
+	border-radius: 3px;
+	padding: 20px 30px;
+	margin: 0 10%;
+	/*stacking fieldsets above each other*/
+	position: relative;
+}
+
+/*inputs*/
+.addform input, .addform textarea, .addform select {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	color: #2C3E50;
+	font-size: 13px;
+	width: 19%;
+	height: 49px;
+}
+/*buttons*/
+.addform .action-button {
+	width: 100px;
+	background: #0f5293;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#quantity::inner-spin-button {
+	opacity: 1;
+}
+.content {
+	background: #fff;
+    border: 0 none;
+    border-radius: 3px;
+    padding: 40px 30px;
+    margin: 0 10%;
+    position: relative;
+}
+
+
+.hash {
+	text-align: center;	
+}
+
+.greeting {
+	color:#000;
+}
+.greeting a {
+	width: 18%;
+    background: #0f5293;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+    border-radius: 3px;
+    display: inherit;
+}
+
+#user_remember_me{
+    height: 13px;
+    width: 13px;
+    float: left;
+}
+
+
+
+
+
+.table {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: $spacer;
+	background-color: $table-bg; // Reset for nesting within parents with `background-color`;
+}
+  th,
+  td {
+    padding: $table-cell-padding;
+    vertical-align: top;
+    border-top: $table-border-width solid $table-border-color;
+  }
+
+.content thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #f1f1f1;
+    text-align: left;
+  }
+
+.content tbody + tbody {
+    border-bottom: 2px solid #f1f1f1;
+  }
+
+
+
+.table-sm {
+  th,
+  td {
+    padding: $table-cell-padding-sm;
+  }
+}
+
+
+.table-bordered {
+  border: $table-border-width solid $table-border-color;
+
+  th,
+  td {
+    border: $table-border-width solid $table-border-color;
+  }
+
+  thead {
+    th,
+    td {
+      border-bottom-width: (2 * $table-border-width);
+    }
+  }
+}
+
+
+
+.table-striped {
+  tbody tr:nth-of-type(odd) {
+    background-color: $table-accent-bg;
+  }
+}
+
+
+
+.table-hover {
+  tbody tr {
+    @include hover {
+      background-color: $table-hover-bg;
+    }
+  }
+}
+
+
+@each $color, $value in $theme-colors {
+  @include table-row-variant($color, theme-color-level($color, -9));
+}
+
+@include table-row-variant(active, $table-active-bg);
+
+
+
+
+
+
+
+@media only screen and (max-width: 320px) {
+.msform {
+	width: 100%;
+}
+.msform fieldset {
+	margin: 0 3%;
+}
+.addform {
+	width: 100%;
+}
+.addform fieldset {
+	margin: 0 3%;
+}
+.content {
+	margin: 0 3%;
+}
+body {
+	background: #075095;
+}
+.addform input, .addform textarea, .addform select {
+	width: 100%;
+}
+}
+
+@media only screen and (max-width: 900px) {
+.addform input, .addform textarea, .addform select {
+	width: 100%;
+}	
+}
+
+@media only screen and (max-width: 560px) {
+.content {
+	font-size: 12px;
+	
+}	
+}
+
+@media only screen and (max-width: 440px) {
+.content {
+	font-size: 8px;
+	
+}	
+}
+
+
+

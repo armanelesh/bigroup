@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>bi-group</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+  
+  <header>
+    <div class="lineblue"></div>
+      <div class="lineorange"></div>
+    <center><a href="#"><img class="isanau" src="https://image.ibb.co/nNhCpy/Untitled_3.png"></a>
+         <div class="triangle"></div>
+    </center>
+  </header>
+
+    
+<div class="container">     
+
+
+<!-- Content starts -->
+<div class="content"> 
+<%= render 'layouts/greeting' %>
+
+</div>   
+   
+<!-- Content ends-->
+ 
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+
+<%= yield %>
+
+</div> 
+   
+
+
+</body>
+</html>

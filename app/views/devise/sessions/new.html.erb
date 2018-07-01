@@ -1,0 +1,32 @@
+<form class="msform">
+        <fieldset>
+
+<h2>Пожалуйста, введите данные для авторизации</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.email_field :email, placeholder: "Email", autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, placeholder: "Пароль", autocomplete: "off" %>
+  </div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="field">
+      
+      <%= f.check_box :remember_me %>
+      <h3>Запомнить меня</h3>
+    </div>
+  <% end -%>
+
+  <div class="actions">
+    <%= f.submit "Войти" %>
+  </div>
+
+
+</fieldset>
+</form>
+<% end %>
+
+
